@@ -230,8 +230,6 @@ body[data-act="0"]{--bg:#050d14;--panel:#0b1822;--panel2:#12293a;--line:#1f4d5c}
 .spcx small{font-weight:400;font-size:9px;color:var(--mut)}
 .spcx.ready{opacity:1;animation:rdy 1s ease-in-out infinite;box-shadow:0 0 22px rgba(255,216,74,.6)}
 .spcx.nope,.spcx.nope{animation:nope .3s}
-.foot{position:sticky;bottom:-16px;z-index:4;margin:8px -18px -18px;padding:12px 18px 16px;background:linear-gradient(to bottom,rgba(0,0,0,0),var(--panel) 12px);border-radius:0 0 18px 18px}
-.foot>.main:first-child,.foot .crow .main{margin-top:0}.foot .main{margin-top:8px;min-height:48px}
 .soonrow{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .act.soon.mini{padding:6px;text-align:center}.act.soon.mini .sil{height:30px;margin:0 0 4px;border-radius:7px}.act.soon.mini b{font-size:11.5px;margin:0}.act.soon.mini span{display:none}
 .howto{font-size:12.5px;line-height:1.4;color:var(--mut);margin:4px 0 0}
@@ -241,6 +239,14 @@ body[data-act="0"]{--bg:#050d14;--panel:#0b1822;--panel2:#12293a;--line:#1f4d5c}
 .chal .cnt{font-size:11.5px;color:var(--fg);font-weight:700;opacity:.85}.chal{padding:5px 10px}.chal b{font-size:13px}
 .card.pz .grid5{max-width:200px;gap:4px;margin-top:6px}.card.pz .front{margin:4px 0 0}.card.pz h3{margin-top:8px}.card.pz .statgrid div{padding:4px 8px}.card.pz .tags{margin-top:6px}
 .card.cfgc .cfg .row{margin-top:6px}
+.ov{padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(12px + env(safe-area-inset-bottom,0px));overflow:hidden;align-items:center;justify-content:center}
+.card{display:flex;flex-direction:column;max-height:100%;box-sizing:border-box;margin:0 auto;padding:16px 16px 14px}
+.cbody{overflow-y:auto;overflow-x:hidden;min-height:0;flex:1 1 auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin-right:-8px;padding-right:8px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}
+.cbody::-webkit-scrollbar{width:4px}.cbody::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18);border-radius:4px}
+.foot{flex:0 0 auto;margin-top:10px;padding-top:12px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.foot .main,.foot .crow .main{margin:0!important;min-height:48px}.foot .crow{gap:8px;margin:0}.foot .confirm{margin:0}.foot .confirm p{margin:0 0 8px}
+.card .title{font-size:26px!important;margin:0 0 6px}.card>.cbody>p.c:first-of-type{margin-top:2px}
+.card.treecard{height:100%}.card.treecard .cbody{display:flex;flex-direction:column;overflow:hidden}.card.treecard .tmapwrap{height:auto;flex:1 1 auto;min-height:200px}
 </style>
 <div id="app">
   <canvas id="cv" aria-label="Arena"></canvas>
